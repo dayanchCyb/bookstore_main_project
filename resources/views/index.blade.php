@@ -17,6 +17,7 @@
                     <a href="{{ route('product.show', $product->id) }}">
                         {{ $product->name }}
                     </a>
+
                     <div class="h6">
                         Author: {{ $product->author}}
                     </div>

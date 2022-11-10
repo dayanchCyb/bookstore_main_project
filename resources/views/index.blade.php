@@ -12,13 +12,16 @@
         @foreach($products as $product)
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="bg-white border rounded p-3">
-                    <a href="" class="h6 d-block">
+                    {{ $product->image }}
+                    <img src="{{ asset('img/jp.jpg') }}" alt="">
+                    <a href="{{ route('product.show', $product->id) }}">
                         {{ $product->name }}
                     </a>
                     <div class="h6">
-                        Category: {{ $product->category->name }}
+                        Author: {{ $product->author}}
                     </div>
                 </div>
+
             </div>
         @endforeach
     </div>
@@ -26,3 +29,14 @@
 </div>
 </body>
 </html>
+
+{{--<div class="h6">--}}
+{{--Category: {{ $product->category->name }}--}}
+{{--</div>--}}
+{{--<div class="h6">--}}
+{{--Price: {{ $product->price }}--}}
+{{--</div>--}}
+{{--<div class="h6">--}}
+{{--Barcode: {{ $product->barcode}}--}}
+{{--</div>--}}
+

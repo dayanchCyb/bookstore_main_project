@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('barcode')->nullable();
+            $table->string('author')->nullable();
             $table->text('description')->nullable();
-            $table->unsignedFloat('price')->default(0);
+            $table->unsignedFloat('price');
             $table->unsignedInteger('stock')->default(0);
             $table->unsignedInteger('viewed')->default(0);
             $table->timestamps();

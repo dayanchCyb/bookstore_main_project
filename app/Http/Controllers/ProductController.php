@@ -18,4 +18,14 @@ class ProductController extends Controller
             ]);
     }
 
+    public function show($id)
+    {
+        $products = Product::with(['category'])
+            ->findOrFail($id);
+
+        return view('show')
+            ->with([
+                'products' => $products,
+            ]);
+    }
 }

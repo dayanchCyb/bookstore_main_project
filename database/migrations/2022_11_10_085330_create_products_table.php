@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->cascadeOnDelete();
             $table->string('name');
-            $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->string('barcode')->nullable();
             $table->text('description')->nullable();

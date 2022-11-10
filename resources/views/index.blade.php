@@ -12,7 +12,7 @@
         @foreach($products as $product)
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="bg-white border rounded p-3">
-                    <a href="{{ route('product.show', $product->id) }}" class="h6 d-block">
+                    <a href="" class="h6 d-block">
                         {{ $product->name }}
                     </a>
                     <div class="h6">
